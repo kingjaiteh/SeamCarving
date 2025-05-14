@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seam Carving Project Showcase</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #333;
+        }
+        .showcase-section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .showcase-section:last-child {
+            border-bottom: none;
+        }
+        .showcase-section h2 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .image-pair {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .image-container {
+            flex-basis: 48%; /* Adjust for spacing, allows two images side-by-side */
+            margin-bottom: 20px; /* Spacing if they wrap */
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .image-container h3 {
+            font-size: 1em;
+            color: #666;
+            margin-top: 8px;
+        }
+        .explanation {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 3px solid #007bff;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Seam Carving Project Showcase</h1>
+            <p>Demonstrating content-aware image resizing using the Seam Carving algorithm.</p>
+        </header>
+
+        <!-- Section 1: Image of Yourself -->
+        <section class="showcase-section">
+            <h2>My Image: Seam Carved</h2>
+            <div class="image-pair">
+                <div class="image-container">
+                    <h3>Original Image</h3>
+                    <!-- !!! REPLACE 'me_original.jpg' WITH YOUR FILENAME !!! -->
+                    <img src="IMG-20230526-WA0012.jpg" alt="My Original Image">
+                </div>
+                <div class="image-container">
+                    <h3>Carved Image</h3>
+                    <!-- !!! REPLACE 'me_carved.jpg' WITH YOUR FILENAME !!! -->
+                    <img src="IMG-20230526-WA0012.jpg" alt="My Carved Image">
+                </div>
+            </div>
+            <div class="explanation">
+                <p>
+                    <!-- !!! WRITE YOUR EXPLANATION HERE !!! -->
+                    This is a picture of me in my Community College Gradutaion Ceremony. I tried to reduce its width.
+                    Notice how the background was removed.
+                    The target dimensions were 1200 x 1600.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Good Case -->
+        <section class="showcase-section">
+            <h2>Good Case Example</h2>
+            <div class="image-pair">
+                <div class="image-container">
+                    <h3>Original Image</h3>
+                    <!-- !!! REPLACE 'good_case_original.png' WITH YOUR FILENAME !!! -->
+                    <img src="IMG-20230526-WA0012.jpg" alt="Good Case Original">
+                </div>
+                <div class="image-container">
+                    <h3>Carved Image</h3>
+                    <!-- !!! REPLACE 'good_case_carved.png' WITH YOUR FILENAME !!! -->
+                    <img src="me_carved324.png" alt="Good Case Carved">
+                </div>
+            </div>
+            <div class="explanation">
+                <p>
+                    <!-- !!! WRITE YOUR EXPLANATION HERE !!! -->
+                    This image demonstrates a successful application of seam carving.
+                    The important foreground elements are well preserved while the less important pillars and background
+                    was effectively removed to reduce the image's dimensions. The target dimensions were 950 x 1150.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: Failure Case -->
+        <section class="showcase-section">
+            <h2>Failure Case Example</h2>
+            <div class="image-pair">
+                <div class="image-container">
+                    <h3>Original Image</h3>
+                    <!-- !!! REPLACE 'failure_case_original.jpg' WITH YOUR FILENAME !!! -->
+                    <img src="IMG-20230526-WA0012.jpg" alt="Failure Case Original">
+                </div>
+                <div class="image-container">
+                    <h3>Carved Image</h3>
+                    <!-- !!! REPLACE 'failure_case_original_carved.jpg' WITH YOUR FILENAME !!! -->
+                    <img src="me_carvedbad.png" alt="Failure Case Carved">
+                </div>
+            </div>
+            <div class="explanation">
+                <p>
+                    <!-- !!! WRITE YOUR EXPLANATION HERE !!! -->
+                    This image shows some limitations or artifacts of the seam carving algorithm.
+                    You can see distortion of straight lines, unnatural compression of important of my face.
+                    This often happens with highly structured scenes, human faces or when the image is resized too aggressively.
+                    The target dimensions were 650 x 800.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Seam Carving Project - Omar Jaiteh - ojaiteh1</p>
+        </footer>
+    </div>
+</body>
+</html>
